@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../lista-de-compras-do-zero/public/styles/StylePageList.css">
+    <title>Lista de Compras</title>
+</head>
+<body>
+    <header>
+        <div class="container-header">
+            <div class="logo">
+                <img height="35" src="../lista-de-compras-do-zero/public/images/Lista de Compra$.svg" alt="Logo Lista de Compras">
+            </div>
+            <div class="Back">
+                <a href="/"> <img height="40" src="../lista-de-compras-do-zero/public/images/back.svg" alt="Seta para Voltar">
+                </a>
+            </div>
+        </div>
+    </header>
+    <section id="container-card-add-products">
+        <div onclick="Modal.open()" class="card-new-products">
+            <h3>
+                <span>Adicionar Produtos</span>
+                <img src="../lista-de-compras-do-zero/public/images/plus.svg" alt="Desenho de uma lista">
+            </h3>
+        </div>
+        <section id="container-card-total">
+            <div class="card-total">
+                <h3>
+                    <span>Total da Compra</span>
+                    <img src="../lista-de-compras-do-zero/public/images/Caixa_Registradora.png" alt="Desenho de uma lista">
+                </h3>
+                <p id="Total_display">R$45,90</p>
+            </div>
+        </section>
+        <section id="container-cards-initial">
+            <div class="card-new-list">
+                <h3>
+                    <span>Listas Antigas</span>
+                    <img src="../lista-de-compras-do-zero/public/images/lista-de-afazeres(1).svg" alt="Desenho de uma lista">
+                </h3>
+            </div>
+        </section>
+    <main class="container">
+        <section id="container-list-itens">
+            <table id="Table-itens">
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Quantidade</th>
+                        <th>Valor Unid.</th>
+                        <th>Valor Total</th>                      
+                    </tr>
+                </thead>
+                <tbody id="data-table">
+
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <div class="modal-overlay">
+        <div class="modal">
+            <div id="form">
+                <h2>Adicionar Produtos</h2>
+                <form action="" onsubmit="capturaModal.submit(event)">
+                <div class="product">
+                    <label class="sr-only" for="description">Descreva o Produto</label>
+                    <input size="50" class="description" id="product" name="product" type="text" placeholder="Digite Seu Produto">
+                    <input id="quantidade" type="number" name="quantidade" placeholder="Quantidade">
+                </div>
+                <div>
+                    <label class="sr-only" for="quantidade">Quantidade a comprar</label>
+                    <input class="trocar-por-kg" name="trocar-por-kg" type="checkbox">
+                    <small for="unid-por-peso">Selecione aqui para trocar a unidade de medida por kilogramas</small>
+                </div>
+                <div class="input-group actions">
+                    <a class="button-cancel" onclick="Modal.close()" href="#">Cancelar</a>
+                    <button>Salvar</button>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Lista de Compra$</p>
+    </footer>
+    <script src="../lista-de-compras-do-zero/public/scripts/NewProducts.js"></script>
+</body>
+</html>

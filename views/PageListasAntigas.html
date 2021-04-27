@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../lista-de-compras-do-zero/public/styles/StylePageAntigas.css">
+    <title>Lista de Compras</title>
+</head>
+<body>
+    <header>
+        <div class="container-header">
+            <div class="logo">
+                <img height="35" src="/images/Lista de Compra$.svg" alt="Logo Lista de Compras">
+            </div>
+            <div class="Back">
+                <a href="/"> <img height="40" src="/images/back.svg" alt="Seta para Voltar">
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <section id="container-cards-initial">
+            <div class="card-new-list">
+                <h3>
+                    <img src="/images/Carrinho_de_Compras.png" alt="Desenho de uma lista">
+                </h3>
+                <div Id="Mini_table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tipo de Lista</th>
+                                <th>Data da Lista</th>
+                                <th>Valor da Compra</th>
+                                <th>Status da Compra</th>
+                            </tr>
+                        </thead>
+                            <tbody Id="Data_Mini_Table">
+                                <tr>
+                                    <td>Compra Mensal</td>
+                                    <td>02/10/2021</td>
+                                    <td>R$834,75</td>
+                                    <td>Efetuada</td>
+                                </tr>
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card-new-list">
+                <h3>
+                      <img src="/images/Carrinho_de_Compras.png" alt="Desenho de uma lista">
+                </h3>
+                <div Id="Mini_table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tipo de Lista</th>
+                                <th>Data da Lista</th>
+                                <th>Valor da Compra</th>
+                                <th>Status da Compra</th>
+                            </tr>
+                        </thead>
+                            <tbody Id="Data_Mini_Table">
+                                <tr>
+                                    <td>Compra Mensal</td>
+                                    <td>02/10/2021</td>
+                                    <td>R$834,75</td>
+                                    <td>Efetuada</td>
+                                </tr>
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="modal-overlay">
+        <div class="modal">
+            <div id="form">
+                <h2>Adicionar Produtos</h2>
+                <form action="" onsubmit="form.submit(event)"></form>
+                <div class="product">
+                    <label class="sr-only" for="description">Descreva o Produto</label>
+                    <input size="50" class="description" id="product" name="product" type="text" placeholder="Digite Seu Produto">
+                    <input size="10" id="quantidade" type="number" name="quantidade" placeholder="Quantidade">
+                </div>
+                <div>
+                    <label class="sr-only" for="quantidade">Quantidade a comprar</label>
+                    <input class="trocar-por-kg" name="trocar-por-kg" type="checkbox">
+                    <small for="unid-por-peso">Selecione aqui para trocar a unidade de medida por kilogramas</small>
+                </div>
+                <div class="input-group actions">
+                    <a class="button-cancel" onclick="Modal.close()" href="#">Cancelar</a>
+                    <button>Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Lista de Compra$</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../lista-de-compras-do-zero/public/styles/index.css">
+    <title>Lista de Compras</title>
+</head>
+<body>
+    <header>
+        <div class="container-header">
+            <div class="logo">
+                <img src="../lista-de-compras-do-zero/public/images/Lista de Compra$.svg" alt="Logo Lista de Compras">
+                <p class="saudacao">Bem Vindo a Sua Lista de Compras</p>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <section id="container-cards-initial">
+            <div onclick="Modal.open()" class="card-new-list">
+                <h3>
+                    <span>Criar Nova Lista</span>
+                    <img src="../lista-de-compras-do-zero/public/images/plus.svg" alt="Sinal de mais">
+                </h3>
+            </div>
+            <div class="card-new-list">
+                <h3>
+                    <span>Listas Antigas</span>
+                    <img src="../lista-de-compras-do-zero/public/images/lista-de-afazeres(1).svg" alt="Desenho de uma lista">
+                </h3>
+            </div>
+            <div class="card-new-list">
+                <h3>
+                    <span>Compras Efetuadas</span>
+                    <img src="../lista-de-compras-do-zero/public/images/income.svg" alt="Desenho de uma lista">
+                </h3>
+            </div>
+        </section>
+        <section id="container-list-itens">
+            <table id="Table-itens">
+                <thead>
+                    <tr>
+                        <th>Lista</th>
+                        <th>Data</th>
+                        <th>Valor da Compra</th>
+                        <th>Status</th>   
+                        <th></th>                   
+                    </tr>
+                </thead>
+                <tbody id="data-table">
+                 </tbody>
+            </table>
+        </section>
+    </main>
+    <div class="modal-overlay">
+        <div class="modal">
+            <div id="form">
+                <h2>Criar Nova Lista</h2>
+                <form action="" onsubmit="FormInnerItens.submit(event)">
+                 <div class="product">
+                    <label class="sr-only" for="TipoDeLista">Selecione o Tipo de Lista</label>
+                    <select name="creat-new-list" id="TipoDeLista">
+                        <option value="">Selecione o Tipo de Lista</option>
+                        <option value="Semanal">Lista de Compras Semanal</option>
+                        <option value="Mensal">Lista de Compras Mensal</option>
+                    </select>
+                    <input id="DateList" type="date" name="Datelist">
+                 </div>
+
+                 <div class="input-group actions">
+                    <a class="button-cancel" onclick="Modal.close()" href="#">Cancelar</a>
+                    <button>Salvar</button>
+                 </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Lista de Compra$</p>
+    </footer>
+    <script src="../lista-de-compras-do-zero/public/scripts/index.js"></script>
+</body>
+</html>
